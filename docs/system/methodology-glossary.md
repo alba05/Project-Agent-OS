@@ -113,6 +113,14 @@ Illustrative project folders that show how the system can be applied in a domain
 
 In this repository, `examples/ai-music-project/` is an example layer, not the system identity.
 
+### Sample Layer
+
+A lighter-weight layer for temporary or operational samples produced by auxiliary threads.
+
+Sample-layer outputs are useful for validation, reference, or review, but should not automatically be treated as stable repository method.
+
+They should remain in sample or example space until reviewed by the main thread.
+
 ### Temporary Experiments
 
 Exploratory materials, trials, or drafts that may inform the methodology later but are not yet part of the stable operating system.
