@@ -58,6 +58,7 @@ See:
 
 - [System Overview](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/system-overview.md)
 - [Methodology Glossary](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/methodology-glossary.md)
+- [GitHub Strategy](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/github-strategy.md)
 - [Project-Scoped Agent Prompt Spec](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/project-scoped-agent-prompt.md)
 - [Memory Architecture](C:/Users/Administrator/Documents/Project-Agent-OS/docs/memory/memory-architecture.md)
 - [Thread Handoff Protocol](C:/Users/Administrator/Documents/Project-Agent-OS/docs/handoff/thread-handoff-protocol.md)
@@ -75,6 +76,8 @@ See:
    Reusable starter files for new project workspaces.
 5. `examples/`
    Optional example projects that show one application of the method without redefining it.
+
+For public repository positioning and GitHub evolution rules, see [GitHub Strategy](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/github-strategy.md).
 
 ## Recommended Use Pattern
 
