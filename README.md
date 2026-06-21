@@ -2,7 +2,11 @@
 
 Project-Agent-OS is a repo-native workflow for running long-lived project agents with stable memory, reusable SOPs, and thread handoff discipline.
 
+Project-Agent-OS 是一套仓库级工作方法，用来把长期 AI 项目协作从“零散聊天记录”升级为“可续接、可写回、可复用的项目操作系统”。
+
 It is designed for teams or solo operators who want to turn AI chats into a persistent project operating system instead of a pile of disconnected conversations.
+
+它适合团队或个人操作者，用 `Agent + Workspace + Memory + SOP + Thread Handoff` 这套结构来运行长期项目。
 
 ## Core Formula
 
@@ -59,6 +63,8 @@ See:
 - [System Overview](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/system-overview.md)
 - [Methodology Glossary](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/methodology-glossary.md)
 - [GitHub Strategy](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/github-strategy.md)
+- [Repository Roadmap](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/repository-roadmap.md)
+- [Issue And Milestone Guide](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/issue-milestone-guide.md)
 - [Project-Scoped Agent Prompt Spec](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/project-scoped-agent-prompt.md)
 - [Memory Architecture](C:/Users/Administrator/Documents/Project-Agent-OS/docs/memory/memory-architecture.md)
 - [Thread Handoff Protocol](C:/Users/Administrator/Documents/Project-Agent-OS/docs/handoff/thread-handoff-protocol.md)
@@ -78,6 +84,8 @@ See:
    Optional example projects that show one application of the method without redefining it.
 
 For public repository positioning and GitHub evolution rules, see [GitHub Strategy](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/github-strategy.md).
+
+For repository phase planning and issue structure, see [Repository Roadmap](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/repository-roadmap.md) and [Issue And Milestone Guide](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/issue-milestone-guide.md).
 
 ## Recommended Use Pattern
 
@@ -107,6 +115,12 @@ AI music is an example application area, not the repository identity.
 3. Create your project folder using [Workspace Blueprint](C:/Users/Administrator/Documents/Project-Agent-OS/templates/workspace-blueprint.md).
 4. Initialize memory files from [Memory Templates](C:/Users/Administrator/Documents/Project-Agent-OS/templates/memory-templates.md).
 5. Start working and keep handoff summaries in sync.
+
+## Meta Repository Memory
+
+This repository now uses its own `knowledge-base/` and `thread-summaries/` so the methodology is also applied to the repository itself.
+
+这个元仓库已经开始自用自己的 memory 结构，避免“方法论只要求示例项目使用，自己却不使用”。
 
 ## Principle
 
