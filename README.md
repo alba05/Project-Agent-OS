@@ -8,7 +8,19 @@ It is designed for teams or solo operators who want to turn AI chats into a pers
 
 它适合团队或个人操作者，用 `Agent + Workspace + Memory + SOP + Thread Handoff` 这套结构来运行长期项目。
 
-## Core Formula
+## What This Repo Is
+
+- A reusable repository-level operating methodology for long-lived AI project work
+- A framework for turning thread work into durable project memory
+- A meta-layer system, not a client project or brand workspace
+
+## 这个仓库是什么
+
+- 一套可复用的、仓库级 AI 项目运行方法
+- 一种把线程工作写回为长期项目记忆的框架
+- 一个方法论层，不是客户项目，也不是品牌执行工作区
+
+## Core Formula / 核心公式
 
 `Agent + Workspace + Memory + SOP + Thread Handoff`
 
@@ -20,7 +32,7 @@ Each project gets:
 4. Stable SOPs for repeatable work.
 5. A handoff protocol across multiple threads.
 
-## What This Solves
+## What This Solves / 解决的问题
 
 Typical AI chat workflows break when:
 
@@ -32,7 +44,9 @@ Typical AI chat workflows break when:
 
 Project-Agent-OS fixes that by making the repository itself the project memory surface.
 
-## System Layers
+Project-Agent-OS 通过把仓库本身变成项目记忆载体，来解决这些问题。
+
+## System Layers / 系统层
 
 1. `Agent`
    The active execution role for the current thread.
@@ -45,7 +59,7 @@ Project-Agent-OS fixes that by making the repository itself the project memory s
 5. `Thread Handoff`
    Structured summaries that let a new thread continue without re-learning everything.
 
-## Repository Structure
+## Repository Structure / 仓库结构
 
 ```text
 docs/
@@ -70,7 +84,7 @@ See:
 - [Thread Handoff Protocol](C:/Users/Administrator/Documents/Project-Agent-OS/docs/handoff/thread-handoff-protocol.md)
 - [Startup SOP](C:/Users/Administrator/Documents/Project-Agent-OS/docs/sop/startup-sop.md)
 
-## Documentation Layers
+## Documentation Layers / 文档分层
 
 1. `README.md`
    GitHub-facing overview of what the system is and how to start.
@@ -87,7 +101,7 @@ For public repository positioning and GitHub evolution rules, see [GitHub Strate
 
 For repository phase planning and issue structure, see [Repository Roadmap](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/repository-roadmap.md) and [Issue And Milestone Guide](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/issue-milestone-guide.md).
 
-## Recommended Use Pattern
+## Recommended Use Pattern / 推荐用法
 
 1. Create one folder for one real project.
 2. Start one main thread with the project-scoped agent prompt.
@@ -95,7 +109,23 @@ For repository phase planning and issue structure, see [Repository Roadmap](C:/U
 4. After meaningful progress, write back stable conclusions to memory and SOP.
 5. Use handoff summaries to move work between threads without context loss.
 
-## AI Music Fit
+## Example Layer / 示例层
+
+The repository includes optional examples to show how the method can be applied in a real domain.
+
+仓库包含可选示例层，用来展示这套方法如何落到真实领域。
+
+Current example:
+
+- [AI Music Project Example](C:/Users/Administrator/Documents/Project-Agent-OS/examples/ai-music-project/README.md)
+
+Rule:
+
+1. Examples help demonstrate the method.
+2. Examples do not redefine the method.
+3. Heavy operational sample assets can remain local by default and do not need to enter the public repository automatically.
+
+## AI Music Fit / 为什么适合 AI 音乐
 
 This framework works especially well for AI music projects because they often involve:
 
@@ -108,7 +138,7 @@ The included example project is generic AI music infrastructure, not tied to any
 
 AI music is an example application area, not the repository identity.
 
-## First Run
+## First Run / 快速开始
 
 1. Read [System Overview](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/system-overview.md).
 2. Copy the prompt from [Project-Scoped Agent Prompt Spec](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/project-scoped-agent-prompt.md).
@@ -116,13 +146,13 @@ AI music is an example application area, not the repository identity.
 4. Initialize memory files from [Memory Templates](C:/Users/Administrator/Documents/Project-Agent-OS/templates/memory-templates.md).
 5. Start working and keep handoff summaries in sync.
 
-## Meta Repository Memory
+## Meta Repository Memory / 元仓库自用记忆
 
 This repository now uses its own `knowledge-base/` and `thread-summaries/` so the methodology is also applied to the repository itself.
 
 这个元仓库已经开始自用自己的 memory 结构，避免“方法论只要求示例项目使用，自己却不使用”。
 
-## Principle
+## Principle / 原则
 
 The goal is not to make the assistant sound smart.
 
