@@ -32,6 +32,9 @@ Each project gets:
 4. Stable SOPs for repeatable work.
 5. A handoff protocol across multiple threads.
 
+简要理解：
+先有工作区，再有项目级 Agent，再逐步把 memory、SOP 和 handoff 补齐，不需要一开始一次做完全部层。
+
 ## What This Solves / 解决的问题
 
 Typical AI chat workflows break when:
@@ -46,6 +49,8 @@ Project-Agent-OS fixes that by making the repository itself the project memory s
 
 Project-Agent-OS 通过把仓库本身变成项目记忆载体，来解决这些问题。
 
+执行顺序上，通常先解决“信息不丢”和“线程可续接”，再逐步优化 SOP 和结构。
+
 ## System Layers / 系统层
 
 1. `Agent`
@@ -58,6 +63,11 @@ Project-Agent-OS 通过把仓库本身变成项目记忆载体，来解决这些
    Repeatable operating procedures for recurring tasks.
 5. `Thread Handoff`
    Structured summaries that let a new thread continue without re-learning everything.
+
+简要顺序：
+`Agent -> Workspace -> Memory -> SOP -> Thread Handoff`
+
+也就是说，先让线程在正确边界内工作，再让结论沉淀，最后再解决跨线程续接。
 
 ## Repository Structure / 仓库结构
 
@@ -84,6 +94,9 @@ See:
 - [Thread Handoff Protocol](C:/Users/Administrator/Documents/Project-Agent-OS/docs/handoff/thread-handoff-protocol.md)
 - [Startup SOP](C:/Users/Administrator/Documents/Project-Agent-OS/docs/sop/startup-sop.md)
 
+建议阅读顺序：
+先读 `System Overview`，再读 `Project-Scoped Agent Prompt Spec`，然后看 `Memory Architecture` 和 `Thread Handoff Protocol`。
+
 ## Documentation Layers / 文档分层
 
 1. `README.md`
@@ -101,6 +114,9 @@ For public repository positioning and GitHub evolution rules, see [GitHub Strate
 
 For repository phase planning and issue structure, see [Repository Roadmap](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/repository-roadmap.md) and [Issue And Milestone Guide](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/issue-milestone-guide.md).
 
+简要理解：
+`README` 负责总览，`docs/` 负责规则，`templates/` 负责起步，`examples/` 负责演示，不建议把四层混写在一起。
+
 ## Recommended Use Pattern / 推荐用法
 
 1. Create one folder for one real project.
@@ -108,6 +124,9 @@ For repository phase planning and issue structure, see [Repository Roadmap](C:/U
 3. Spawn new threads for sub-projects, experiments, or deep work.
 4. After meaningful progress, write back stable conclusions to memory and SOP.
 5. Use handoff summaries to move work between threads without context loss.
+
+大致执行顺序：
+先开主线程，再做项目工作，再写回 memory，最后用 handoff 把上下文交给后续线程。
 
 ## Example Layer / 示例层
 
@@ -125,6 +144,9 @@ Rule:
 2. Examples do not redefine the method.
 3. Heavy operational sample assets can remain local by default and do not need to enter the public repository automatically.
 
+简要说明：
+先有方法论，再有示例；示例是帮助理解，不是反过来决定主仓库应该长成什么样。
+
 ## AI Music Fit / 为什么适合 AI 音乐
 
 This framework works especially well for AI music projects because they often involve:
@@ -138,6 +160,9 @@ The included example project is generic AI music infrastructure, not tied to any
 
 AI music is an example application area, not the repository identity.
 
+简要说明：
+这里可以从 AI 音乐切入理解方法，但不要把仓库误认为“只服务 AI 音乐”的项目。
+
 ## First Run / 快速开始
 
 1. Read [System Overview](C:/Users/Administrator/Documents/Project-Agent-OS/docs/system/system-overview.md).
@@ -146,14 +171,23 @@ AI music is an example application area, not the repository identity.
 4. Initialize memory files from [Memory Templates](C:/Users/Administrator/Documents/Project-Agent-OS/templates/memory-templates.md).
 5. Start working and keep handoff summaries in sync.
 
+最简顺序：
+先看系统说明，再建工作区，再初始化 memory，然后开始工作，最后保持 handoff 更新。
+
 ## Meta Repository Memory / 元仓库自用记忆
 
 This repository now uses its own `knowledge-base/` and `thread-summaries/` so the methodology is also applied to the repository itself.
 
 这个元仓库已经开始自用自己的 memory 结构，避免“方法论只要求示例项目使用，自己却不使用”。
 
+简要说明：
+如果某条规则已经影响后续线程，就优先写回本仓库 memory，而不是只留在聊天里。
+
 ## Principle / 原则
 
 The goal is not to make the assistant sound smart.
 
 The goal is to make project progress durable.
+
+一句话理解：
+优先让项目可持续推进，其次才是让单次回答看起来完整或漂亮。
